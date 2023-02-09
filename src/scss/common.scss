@@ -1,0 +1,93 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+   padding: 15px 20px;
+   color: $blueColor;
+   background-color: $whiteColor;
+   border-radius: 10px;
+   transition: all 0.5s;
+   cursor: pointer;
+   @media screen and (min-width: $mobileSmall) {
+      padding: 15px 30px;
+   }
+   &:hover {
+      transform: scale(1.1);
+   }
+}
+.button-blue {
+   padding: 15px 20px;
+   color: $whiteColor;
+   background-color: $blueColor;
+   border-radius: 10px;
+   @media screen and (min-width: $mobileSmall) {
+      padding: 15px 30px;
+   }
+}
+
+.section {
+   padding: 35px 0 0 0;
+   @media screen and (min-width: $mobile) {
+      padding: 70px 0 0 0;
+   }
+   @media screen and (min-width: $tablet) {
+      padding: 142px 0 0 0;
+   }
+}
+
+.section__data {
+   display: flex;
+   flex-direction: column;
+   row-gap: 0.75rem;
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.title {
+   font-size: 40px;
+   font-weight: 700;
+   line-height: 59px;
+   text-align: center;
+   color: #000;
+   @media screen and (min-width: $mobile) {
+      font-size: 50px;
+   }
+}
+
+
+.grid {
+   display: grid;
+   gap: 30px;
+}
+
+.color-red {
+   color: red;
+}
+.color-green {
+   color: green;
+}
+
+.bg-header {
+   padding: 0px 0px 0px 0px;
+   box-shadow: 0 4px 8px rgba($color: $blackColor, $alpha: 0.3);
+}
+
+/*========= SCROLL UP ==========*/
+.scrollup {
+   position: fixed;
+   padding: 5px;
+   right: 20px;
+   bottom: -30%;
+   display: inline-flex;
+   background-color: $whiteColor;
+   font-size: 20px;
+   z-index: 1;
+   color: $blueColor;
+   border: 1px solid $blueColor;
+   transition: 0.3s;
+}
+.scrollup:hover {
+   transform: translateY(-5px);
+}
+/* Show Scroll Up */
+.show-scroll {
+   bottom: 20px;
+}

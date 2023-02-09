@@ -1,0 +1,114 @@
+/*========= HEADER & NAV ==========*/
+.header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: $blueColor;
+   z-index: 100;
+   transition: bacground 0.3s;
+}
+
+.nav {
+	padding: 20px 0px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+	&__menu {
+      position: fixed;
+      background-color:  rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(32px);
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      border-left: 2px solid $blueColor;
+      transition: right 0.3s;
+      @media screen and (min-width: $mobile) {
+         position: static;
+         display: flex;
+         justify-content: end;
+         align-items: center;
+         background-color:  transparent;
+      }
+	}
+	&__logo {
+		& img {
+			width: 40px;
+         @media screen and (min-width: $mobile) {
+            width: 57px;
+         }
+		}
+	}
+	&__list {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      font-size: 25px;
+      @media screen and (min-width: $mobile) {
+         margin-top: 0px;
+         display: flex;
+         flex-direction: row;
+         gap: 30px;
+         font-size: 18px;
+      }
+      @media screen and (min-width: $tablet) {
+         gap: 50px;
+      }
+	}
+   &__item {
+      text-transform: uppercase;
+   }
+   &__link {
+      display: flex;
+      justify-content: center;
+      color: $whiteColor;
+      transition: color 0.5s;
+      &:hover {
+         color: $redColor;
+      }
+   }
+	&__button {
+      margin-top: 40px;
+      transition: transform 0.5s;
+      @media screen and (min-width: $mobile) {
+         margin-top: 0px;
+         margin-left: 80px;
+      }
+      @media screen and (min-width: $tablet) {
+         margin-left: 140px;
+      }
+      &:hover {
+         color: $redColor;
+         transform: scale(1.1);
+      }
+	}
+
+	&__toggle {
+      display: flex;
+      font-size: 25px;
+		color: $whiteColor;
+		cursor: pointer;
+      @media screen and (min-width: $mobile) {
+         display: none;
+      }
+	}
+
+	&__close {
+		position: absolute;
+		top: 38px;
+		right: 15px;
+		font-size: 25px;
+      color: $whiteColor;
+		cursor: pointer;
+      @media screen and (min-width: $mobile) {
+         display: none;
+      }
+	}
+}
+
+.show-menu {
+   right: 0;
+}

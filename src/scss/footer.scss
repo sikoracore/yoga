@@ -1,0 +1,84 @@
+//====================================================================================================
+.footer {
+   padding: 40px 0px;
+   color: $whiteColor;
+   background-color: $blueColor;
+   @media screen and (min-width: $tablet) {
+      padding: 128px 0px 69px 0px;
+   }
+   &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      @media screen and (min-width: $tablet) {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: baseline;
+         gap: 0px;
+      }
+   }
+   &__item {
+      padding: 10px;
+   }
+   &__img {
+      width: 120px;
+   }
+   &__card {
+      margin-bottom: 0px;
+      @media screen and (min-width: $tablet) {
+         margin-bottom: 65px;
+      }
+   }
+   &__title {
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 35px;
+      text-align: center;
+      @media screen and (min-width: $tablet) {
+         margin-bottom: 65px;
+      }
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media screen and (min-width: $mobileSmall) {
+         display: flex;
+         flex-direction: row;
+      }
+      @media screen and (min-width: $tablet) {
+         gap: 30px;
+      }
+   }
+   &__link {
+      padding: 10px;
+      text-transform: uppercase;
+      transition: color 0.5s;
+      &:hover {
+         color: $redColor;
+      }
+   }
+   &__social {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+   }
+   &__social-link {
+      font-size: 30px;
+      transition: color 0.5s;
+      &:hover {
+         color: $redColor;
+      }
+   }
+   &__copyright {
+      margin-top: 20px;
+      text-align: center;
+      @media screen and (min-width: $tablet) {
+         margin-top: 0px;
+      }
+   }
+}
+//====================================================================================================
